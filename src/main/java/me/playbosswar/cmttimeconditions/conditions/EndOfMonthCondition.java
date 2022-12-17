@@ -23,7 +23,7 @@ public class EndOfMonthCondition implements ConditionRule {
     @Override
     public boolean evaluate(Facts facts) {
         Calendar calendar = Calendar.getInstance();
-        return calendar.get(Calendar.DATE) == calendar.getActualMaximum(Calendar.DATE);
+        return calendar.get(Calendar.DAY_OF_MONTH) == calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
     }
 
     @Override

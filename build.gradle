@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'me.playbosswar.cmttimeconditions'
-version '1.0-SNAPSHOT'
+version '1.0.1'
 
 repositories {
     mavenCentral()
@@ -15,8 +15,14 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'me.playbosswar.com:commandtimer:7.0.1'
-    compileOnly 'org.jeasy:easy-rules-core:4.1.0'
-    compileOnly 'org.jetbrains:annotations:23.0.0'
+    implementation 'me.playbosswar.com:commandtimer:7.1.1'
+    implementation 'org.jeasy:easy-rules-core:4.1.0'
+    compileOnly 'org.jetbrains:annotations:23.1.0'
     compileOnly 'org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
+
+}
+
+test {
+    useJUnitPlatform()
 }
