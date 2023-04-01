@@ -4,7 +4,10 @@ import me.playbosswar.cmttimeconditions.conditions.EndOfMonthCondition;
 import me.playbosswar.cmttimeconditions.conditions.StartOfMonthCondition;
 import me.playbosswar.com.api.ConditionExtension;
 import me.playbosswar.com.api.ConditionRules;
+import me.playbosswar.com.api.events.EventExtension;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
 
 public class CommandTimerTimeConditions extends ConditionExtension {
     ConditionRules rules = new ConditionRules();
@@ -36,5 +39,10 @@ public class CommandTimerTimeConditions extends ConditionExtension {
 
     public @NotNull ConditionRules getRules() {
         return rules;
+    }
+
+    @Override
+    public ArrayList<EventExtension> getEvents() {
+        return null;
     }
 }

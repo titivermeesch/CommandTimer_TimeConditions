@@ -2,8 +2,12 @@ plugins {
     id 'java'
 }
 
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+}
+
 group 'me.playbosswar.cmttimeconditions'
-version '1.0.1'
+version '1.0.2'
 
 repositories {
     mavenCentral()
@@ -15,7 +19,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'me.playbosswar.com:commandtimer:7.1.1'
+    implementation 'me.playbosswar.com:commandtimer:8.0.0'
     implementation 'org.jeasy:easy-rules-core:4.1.0'
     compileOnly 'org.jetbrains:annotations:23.1.0'
     compileOnly 'org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT'
