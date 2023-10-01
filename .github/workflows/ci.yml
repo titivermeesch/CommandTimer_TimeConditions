@@ -1,0 +1,34 @@
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  Build-Java8:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: "adopt"
+          java-version: "8"
+      - name: Gradle build
+        run: gradle jar
+        env:
+          GH_REPO_TOKEN: ${{ secrets.GH_REPO_TOKEN }}
+          GH_REPO_USERNAME: ${{ secrets.GH_REPO_USERNAME }}
+  Build-Java21:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: "adopt"
+          java-version: "21"
+      - name: Gradle build
+        run: gradle jar -b java21-build.gradle
+        env:
+          GH_REPO_TOKEN: ${{ secrets.GH_REPO_TOKEN }}
+          GH_REPO_USERNAME: ${{ secrets.GH_REPO_USERNAME }}
