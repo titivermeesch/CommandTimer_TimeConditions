@@ -30,7 +30,7 @@ public class TimeChangeEvent extends EventExtension {
                 }
                 times.put(w.getName(), worldTime);
             }
-        }, 0, 1);
+        }, 0, 20);
     }
 
     @Override
