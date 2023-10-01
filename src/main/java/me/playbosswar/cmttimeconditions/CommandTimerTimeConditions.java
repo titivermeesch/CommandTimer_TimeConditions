@@ -2,6 +2,8 @@ package me.playbosswar.cmttimeconditions;
 
 import me.playbosswar.cmttimeconditions.conditions.EndOfMonthCondition;
 import me.playbosswar.cmttimeconditions.conditions.StartOfMonthCondition;
+import me.playbosswar.cmttimeconditions.events.TimeChangeEvent;
+import me.playbosswar.com.CommandTimerPlugin;
 import me.playbosswar.com.api.ConditionExtension;
 import me.playbosswar.com.api.ConditionRules;
 import me.playbosswar.com.api.events.EventExtension;
@@ -11,9 +13,12 @@ import java.util.ArrayList;
 
 public class CommandTimerTimeConditions extends ConditionExtension {
     ConditionRules rules = new ConditionRules();
+    ArrayList<EventExtension> events = new ArrayList<>();
 
     public CommandTimerTimeConditions() {
         rules.register(new StartOfMonthCondition(), new EndOfMonthCondition());
+
+        events.add(new TimeChangeEvent(CommandTimerPlugin.getPlugin(), this));
     }
 
     @Override
@@ -34,7 +39,7 @@ public class CommandTimerTimeConditions extends ConditionExtension {
 
     @Override
     public @NotNull String getVersion() {
-        return "1.0.1";
+        return "1.1.0";
     }
 
     public @NotNull ConditionRules getRules() {
@@ -43,6 +48,6 @@ public class CommandTimerTimeConditions extends ConditionExtension {
 
     @Override
     public ArrayList<EventExtension> getEvents() {
-        return null;
+        return events;
     }
 }
