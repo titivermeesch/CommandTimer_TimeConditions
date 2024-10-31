@@ -22,6 +22,7 @@ public class StartOfMonthCondition implements ConditionRule {
 
     @Override
     public boolean evaluate(Facts facts) {
+        System.out.println(Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
         return Calendar.getInstance().get(Calendar.DAY_OF_MONTH) == 1;
     }
 

@@ -3,7 +3,7 @@ plugins {
 }
 
 java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+    toolchain.languageVersion.set(JavaLanguageVersion.of(8))
 }
 
 group 'me.playbosswar.cmttimeconditions'
@@ -19,9 +19,13 @@ repositories {
 }
 
 dependencies {
-    implementation 'me.playbosswar.com:commandtimer:8.0.0'
+    implementation 'me.playbosswar.com:commandtimer:8.7.3'
     implementation 'org.jeasy:easy-rules-core:4.1.0'
     compileOnly 'org.jetbrains:annotations:23.1.0'
     compileOnly 'org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+}
 
+test {
+    useJUnitPlatform()
 }

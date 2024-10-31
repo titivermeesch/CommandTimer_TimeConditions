@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class EndOfMonthConditionTest {
+class EndOfMonthConditionTest {
 
     @Test
         // This test requires manual intervention. Change the date on the machine and check if it works
