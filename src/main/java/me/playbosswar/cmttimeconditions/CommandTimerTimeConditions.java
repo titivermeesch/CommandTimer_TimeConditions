@@ -27,9 +27,8 @@ public class CommandTimerTimeConditions extends ConditionExtension {
     }
 
     @Override
-    public @NotNull
-    String[] getDescription() {
-        return new String[]{ "§7Use complex time calculations to know when to execute a command" };
+    public @NotNull String[] getDescription() {
+        return new String[] { "§7Use complex time calculations to know when to execute a command" };
     }
 
     @Override
@@ -39,7 +38,7 @@ public class CommandTimerTimeConditions extends ConditionExtension {
 
     @Override
     public @NotNull String getVersion() {
-        return "1.1.1";
+        return "1.1.2";
     }
 
     public @NotNull ConditionRules getRules() {
