@@ -38,7 +38,7 @@ public class CommandTimerTimeConditions extends ConditionExtension {
 
     @Override
     public @NotNull String getVersion() {
-        return "1.1.2";
+        return "1.1.3";
     }
 
     public @NotNull ConditionRules getRules() {
